@@ -49,14 +49,42 @@ const pizzaData = [
 function App() {
     return (
     <div>
-    <h1>Hello React</h1>
-    <Pizza />
+    <Header />
+    <Menu />
+    <Footer />
     </div>
     );
 }
 
+function Header(){
+return <h1>Fast React Pizza Co.</h1>;
+}
+
+function Menu(){
+return(
+    <div>
+        <h2>Our menu</h2>
+        <Pizza />
+        <Pizza />
+        <Pizza />
+        <Pizza />
+    </div>
+    
+);
+}
+
+function Footer() {
+return <footer>{new Date().toLocaleTimeString()}We're currently open</footer>;
+}
+
 function Pizza() {
-    return <h2>Pizza</h2>
+    return (
+    <div>
+        <img src="pizzas/spinaci.jpg" alt="Pizza spinachi" />
+    <h2>Pizza Spinaci</h2>
+    <p>Tomato, mozarella, mushrooms, and onion</p>
+    </div>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
